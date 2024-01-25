@@ -1,0 +1,30 @@
+{
+  "name": "VNCSCODE",
+  "version": "1.0.0",
+  "description": "XANAX APIS",
+  "engines": {
+    "node": "17.15.1"
+  },
+  "main": "jrpc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sh start.sh"
+  },
+  "dependencies": {
+    "@bochilteam/scraper-sosmed": "^1.0.5",
+    "puppeteer": "^21.1.0",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node",
+    "express"
+  ]
+}

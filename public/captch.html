@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang='pt-br'>
+
+<head>
+<head>
+<title>NICOLE APIS</title>
+<link rel="shortcut icon" href="https://telegra.ph/file/02e402316b6083c38a3ea.jpg"><link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+</head>
+    <meta charset='utf-8'>
+    <meta name='description' content='NICOLE APIS | CAPTCHA'>
+    <meta name='robots' content='index, follow'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css?family=Yesteryear" rel="stylesheet">
+    <link href="css/captcha/index.css" rel="stylesheet">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<style>
+    /*** DEMO only ***/
+
+    html {
+        font-size: 62.5%;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        color: #ddd;
+        background-color: #1c1c1c;
+        text-align: center;
+    }
+
+    header {
+        margin: 50px auto 10px auto;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin: 5px auto 15px;
+        font-weight: normal;
+    }
+
+    header p {
+        font-size: 14px;
+        margin: 18px 20px 0 20px;
+        line-height: 1.5;
+        color: #FF0000;
+        border-bottom: 1px solid #464646;
+        display: inline-block;
+    }
+
+    main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 470px;
+        height: 60px;
+        margin: -30px 0 0 -235px;
+        border-radius: 4px;
+    }
+
+    .form {
+        box-shadow: 2px 4px 2px #1f1f1f;
+        position: relative;
+        border-radius: 4px;
+    }
+
+    .jCaptchaCanvas {
+        position: absolute;
+        top: -25px;
+        left: 15px;
+    }
+
+    .jCaptcha {
+        padding: 20px 25px 20px 20px;
+        font-size: 15px;
+        width: 320px;
+        height: 60px;
+        box-sizing: border-box;
+        outline: none;
+        border-radius: 4px 0 0 4px;
+        border: none;
+        vertical-align: middle;
+        transition: all 150ms linear;
+        box-shadow: 0 0 8px #4e4706;
+    }
+
+    .jCaptcha:focus,
+    .jCaptcha:focus~.button {
+        box-shadow: 0 0 8px #a79816;
+    }
+
+    .jCaptcha.error,
+    .jCaptcha.error~.button {
+        box-shadow: 0 0 8px #c5391a;
+    }
+
+    .jCaptcha.error~.button {
+        background: #FF0000;
+        color: #fff;
+    }
+
+    .jCaptcha.success,
+    .jCaptcha.success~.button {
+        box-shadow: 0 0 8px #93a023;
+    }
+
+    .jCaptcha.success~.button {
+        background: #FF0000;
+        color: #fff;
+    }
+
+    .jCaptcha.disabled {
+        background-color: #F0F8FF;
+        box-shadow: 0 0 8px #4e4706 !important;
+    }
+
+    .jCaptcha.disabled~.button {
+        background: #F0F8FF;
+        color: #7c7c7c;
+        box-shadow: 0 0 8px #656565;
+        cursor: not-allowed;
+    }
+
+    .button {
+        padding: 21px 0;
+        width: 150px;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        font-size: 12px;
+        font-weight: bold;
+        background: yellow;
+        cursor: pointer;
+        border: none;
+        color: #F0F8FF;
+        line-height: 1;
+        text-transform: uppercase;
+        border-radius: 0 4px 4px 0;
+        margin-left: -4px;
+        letter-spacing: 0.5px;
+        transition: all 150ms linear;
+        box-shadow: 0 0 8px #4e4706;
+        outline: none;
+    }
+
+    .button:hover,
+    .button:focus {
+        background: #F0F8FF;
+    }
+
+    .codeBtn {
+        display: inline-block;
+        margin: 15px auto 0 auto;
+        color: #ddd;
+        font-size: 15px;
+        padding: 12px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .btnWrap {
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .jPopup .content {
+        max-height: 82%;
+        margin: 40px 10px 0 10px;
+        text-align: center;
+        color: #F0F8FF;
+        font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+        overflow: auto;
+    }
+
+    .jPopup .content strong {
+        font-size: 30px;
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .jPopup .content p {
+        font-size: 16px;
+        text-align: left;
+        display: inline-block;
+        padding-bottom: 50px;
+        white-space: nowrap;
+    }
+
+    .jPopup .content span {
+        font-size: 16px;
+        text-align: left;
+        display: block;
+        padding-bottom: 5px;
+        color: #999;
+        font-style: italic;
+    }
+
+    @media screen and (max-width: 540px) {
+
+        h1 {
+            font-size: 50px;
+        }
+
+        header p {
+            padding-bottom: 7px;
+        }
+
+        main {
+            position: static;
+            left: auto;
+            top: auto;
+            width: 280px;
+            margin: 100px auto 100px auto;
+            height: auto;
+        }
+
+        .jCaptcha {
+            width: 180px;
+            height: 50px;
+            padding: 15px 20px 15px 15px;
+        }
+
+        .btnWrap {
+            position: static;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            padding-bottom: 50px;
+        }
+
+        .button {
+            width: 100px;
+            height: 50px;
+            padding: 16px 0;
+        }
+
+        .jPopup .content p,
+        .jPopup .content span {
+            font-size: 13px;
+        }
+    }
+</style>
+
+<body>
+
+    <header>
+
+        <h1>NICOLE APIS</h1>
+
+        <p>Resolva nosso sistema Captcha. Para prosseguir!</p>
+
+    </header>
+
+    <main>
+
+        <form class="form" action="">
+
+            <input class="jCaptcha" type="text" placeholder="Digite o resultado.">
+            <button class="button" type="submit">RESOLVER</button>
+
+        </form>
+
+        <a class="codeBtn" href="wa.me/351964711545/?t=Erro">Report o Erro!</a>
+    </main>
+
+
+
+    <script src="js/captcha/index.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <!-- for demo purposes only -->
+
+    <script>
+
+        // optionally, set maximum number of captcha validation on event:
+        const maxNumberOfTries = 5;
+
+        // captcha initial setup
+        var myCaptcha = new jCaptcha({
+            el: '.jCaptcha',
+            canvasClass: 'jCaptchaCanvas',
+            canvasStyle: {
+                // properties for captcha stylings
+                width: 100,
+                height: 15,
+                textBaseline: 'top',
+                font: '15px Arial',
+                textAlign: 'left',
+                fillStyle: '#ddd'
+            },
+
+            // set callback function
+            callback: function (response, $captchaInputElement, numberOfTries) {
+
+                if (maxNumberOfTries === numberOfTries) {
+                    // maximum attempts reached, so do something
+                    // e.g. disable the form:
+                    document.querySelector('form').removeEventListener('submit', formSubmit);
+                    $captchaInputElement.classList.add('disabled');
+                    $captchaInputElement.placeholder = 'Maximum attempts reached!';
+                    $captchaInputElement.setAttribute('disabled', 'true');
+                    document.querySelector('button').setAttribute('disabled', 'true');
+
+                    return;
+                }
+
+                if (response == 'success') {
+
+                    $captchaInputElement.classList.remove('error');
+                    $captchaInputElement.classList.add('success');
+                    $captchaInputElement.placeholder = 'Resposta Correta!';
+
+    window.location.href = '/dash';
+
+
+                    // now continue with form submit
+
+                }
+
+                if (response == 'error') {
+
+                    $captchaInputElement.classList.remove('success');
+                    $captchaInputElement.classList.add('error');
+                    $captchaInputElement.placeholder = 'Tente Novamente!';
+    window.location.reload();
+                }
+
+            }
+
+        });
+
+        function formSubmit(e) {
+
+            e.preventDefault();
+
+            // myCaptcha validate
+            myCaptcha.validate();
+
+        };
+
+        // validate captcha on form submit event
+        document.querySelector('form').addEventListener('submit', formSubmit);
+
+    </script>
+
+</body>
+
+</html>

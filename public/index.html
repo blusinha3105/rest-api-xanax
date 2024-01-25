@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>NICOLE APIS</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta property="og:title" content="NICOLE APIS"/>
+<meta name="description" content="dono: @tiomodz">
+<link rel="icon" href="https://telegra.ph/file/02e402316b6083c38a3ea.jpg" type="image/x-icon">
+</head>
+<body>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body {
+  font-family: 'Acme', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(https://i.pinimg.com/originals/ee/f8/a3/eef8a31d47d63a79e6b72dc994ee9e91.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover
+}
+
+.ring {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10%;
+  border: 3px solid #fff;
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+  font-size: 40px;
+  color: pink;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 26px red;
+  box-shadow: 0 0 26px rgba(26, 26, 26, 26);
+}
+
+span:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 20%;
+  background-color: pink;
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px pink;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Acme', sans-serif;
+}
+
+.wrapper {
+  width: center;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.main-div {
+  position: relative;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.main-div1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  -webkit-box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  z-index: -1;
+  -webkit-animation-name: pink-shadow;
+  animation-name: pink-shadow;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main-div1::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  -webkit-box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+  box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+  z-index: -1;
+  -webkit-animation-name: cyan-shadow;
+  animation-name: cyan-shadow;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main-div2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  z-index: -1;
+  -webkit-animation-name: gradient-shadow;
+  animation-name: gradient-shadow;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main-div3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 70%;
+  -webkit-box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  z-index: -1;
+  -webkit-animation-name: half-pink-shadow;
+  animation-name: half-pink-shadow;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main-div3::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  height: 70%;
+  -webkit-box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+  box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+  z-index: -1;
+  -webkit-animation-name: half-cyan-shadow;
+  animation-name: half-cyan-shadow;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  background-color: #060C1F;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+@-webkit-keyframes pink-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 50%;
+    left: 0;
+  }
+
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+
+  75% {
+    top: 0;
+    left: 50%;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes pink-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 50%;
+    left: 0;
+  }
+
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+
+  75% {
+    top: 0;
+    left: 50%;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes cyan-shadow {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+
+  25% {
+    right: 0;
+    bottom: 50%;
+  }
+
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+
+  75% {
+    right: 50%;
+    bottom: 0;
+  }
+
+  100% {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@keyframes cyan-shadow {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+
+  25% {
+    right: 0;
+    bottom: 50%;
+  }
+
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+
+  75% {
+    right: 50%;
+    bottom: 0;
+  }
+
+  100% {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes gradient-shadow {
+  0% {
+    -webkit-box-shadow: 0 0 17px 3px #C586C0, 0 0 4px 2px #C586C0;
+    box-shadow: 0 0 17px 3px #C586C0, 0 0 4px 2px #C586C0;
+  }
+
+  20% {
+    -webkit-box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+    box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+  }
+
+  40% {
+    -webkit-box-shadow: 0 0 17px 3px #0f0, 0 0 4px 2px #0f0;
+    box-shadow: 0 0 17px 3px #0f0, 0 0 4px 2px #0f0;
+  }
+
+  60% {
+    -webkit-box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+    box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  }
+
+  80% {
+    -webkit-box-shadow: 0 0 17px 3px #f00, 0 0 4px 2px #f00;
+    box-shadow: 0 0 17px 3px #f00, 0 0 4px 2px #f00;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 17px 3px #C586C0, 0 0 4px 2px #C586C0;
+    box-shadow: 0 0 17px 3px #C586C0, 0 0 4px 2px #C586C0;
+  }
+}
+
+@keyframes gradient-shadow {
+  0% {
+    -webkit-box-shadow: 0 0 17px 3px #C586C0, 0 0 4px 2px #C586C0;
+    box-shadow: 0 0 17px 3px #C586C0, 0 0 4px 2px #C586C0;
+  }
+
+  20% {
+    -webkit-box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+    box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+  }
+
+  40% {
+    -webkit-box-shadow: 0 0 17px 3px #0f0, 0 0 4px 2px #0f0;
+    box-shadow: 0 0 17px 3px #0f0, 0 0 4px 2px #0f0;
+  }
+
+  60% {
+    -webkit-box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+    box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  }
+
+  80% {
+    -webkit-box-shadow: 0 0 17px 3px #f00, 0 0 4px 2px #f00;
+    box-shadow: 0 0 17px 3px #f00, 0 0 4px 2px #f00;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 17px 3px #C586C0, 0 0 4px 2px #C586C0;
+    box-shadow: 0 0 17px 3px #C586C0, 0 0 4px 2px #C586C0;
+  }
+}
+
+@-webkit-keyframes half-pink-shadow {
+  0% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+
+  16.66% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+
+  32.32% {
+    top: 0;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+
+  49.98% {
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+
+  66.64% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+
+  83.3% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@keyframes half-pink-shadow {
+  0% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+
+  16.66% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+
+  32.32% {
+    top: 0;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+
+  49.98% {
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+
+  66.64% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+
+  83.3% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes half-cyan-shadow {
+  0% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+
+  16.66% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+
+  32.32% {
+    bottom: 0;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+
+  49.98% {
+    bottom: 50%;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+
+  66.64% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+
+  83.3% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+
+  100% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@keyframes half-cyan-shadow {
+  0% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+
+  16.66% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+
+  32.32% {
+    bottom: 0;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+
+  49.98% {
+    bottom: 50%;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+
+  66.64% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+
+  83.3% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+
+  100% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+span {
+  color: #fff;
+  font-size: 14px;
+}
+
+i {
+  color: #fff;
+  width: 50px;
+  size: 90px;
+}
+
+.image {
+  width: center;
+  margin-top: 30px;
+}
+
+img {
+  height: 280px;
+  width: 280px;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.btn-whatsapp{
+  position: absolute;
+  outline: none;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+  cursor: pointer;
+  background: #34af23;
+  color: #fff;
+  font-size: 3.7rem;
+  border: 4px solid #f1f1f1;
+  
+  animation-name: pulsar;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes pulsar {
+  0%{
+  height: 130px;
+  width: 130px;
+  }
+  100%{
+  height: 150px;
+  width: 150px;
+  }
+}
+
+</style>
+
+<center>
+<div style="font-size: 39px;" class="ring">
+<div class="image">
+<img src="https://telegra.ph/file/02e402316b6083c38a3ea.jpg">
+</div>
+<h3>BEM VINDO(A)</h3>
+<div class="wrapper">
+<a href="/security" style="text-decoration: none;">
+<div class="main-div main-div3">
+<h1>Dashboard</h1>
+</div>
+</a>
+</div>
+</div>
+</center>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6faaecbfd9d19ab1","version":"2021.12.0","r":1,"token":"6970d9ef45574571a18b8e35a31a2265","si":100}' crossorigin="anonymous">
+</script>
+</body>
+</html>
